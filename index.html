@@ -1,0 +1,23 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Mythos Code</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,system-ui,sans-serif;background:radial-gradient(circle at 20% 0%,#2a2a2a,#050505 60%);color:#eee;height:100vh;display:flex;flex-direction:column}
+.glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(20px);border-radius:16px}
+button{background:#fff;color:#000;border:0;border-radius:12px;padding:10px 16px;font-weight:600;cursor:pointer}button.ghost{background:rgba(255,255,255,.08);color:#eee}
+#login{margin:auto;padding:40px;text-align:center;width:420px}#login h1{letter-spacing:.2em;margin:0 0 8px}
+header{display:flex;gap:10px;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.1)}header .sp{flex:1}
+.pill{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08)}
+#log{flex:1;overflow:auto;padding:20px;display:flex;flex-direction:column;gap:10px}
+.m{padding:12px 14px;max-width:85%;white-space:pre-wrap;line-height:1.5}.u{align-self:flex-end;background:rgba(255,255,255,.14)}.a{align-self:flex-start}.t{font-family:Consolas,monospace;font-size:12px;opacity:.7}
+footer{padding:12px 16px;display:flex;gap:8px;align-items:flex-end}textarea{flex:1;resize:none;height:60px;background:rgba(255,255,255,.06);color:#eee;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;font:inherit}
+#files{font-size:12px;opacity:.8;padding:0 16px}
+</style></head><body>
+<div id="login" class="glass"><h1>✦ MYTHOS CODE</h1><p style="opacity:.7">KI-Coding-Agent von Mythoscraft</p>
+<button id="btnLogin">Mit MythosAI anmelden</button><p id="lstat" style="opacity:.6;font-size:13px"></p></div>
+<div id="app" style="display:none;flex:1;flex-direction:column;min-height:0">
+<header><b>✦ MYTHOS CODE</b><span class="pill" id="folder">Kein Ordner</span><button class="ghost" id="btnFolder">Ordner wählen</button>
+<label class="pill"><input type="checkbox" id="auto"> Vollzugriff (nicht nachfragen)</label><span class="sp"></span>
+<span class="pill" id="timer">⏱ 0s</span><span class="pill" id="usage">Usage …</span><button class="ghost" id="btnOut">Abmelden</button></header>
+<div id="log"></div><div id="files"></div>
+<footer><button class="ghost" id="btnUp">📎 Dateien</button><textarea id="inp" placeholder="Was soll Mythos bauen? (Enter = senden)"></textarea><button id="btnSend">Senden</button></footer></div>
+<script src="renderer.js"></script></body></html>

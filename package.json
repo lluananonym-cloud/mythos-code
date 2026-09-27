@@ -1,0 +1,37 @@
+{
+  "name": "mythos-code-app",
+  "productName": "Mythos Code",
+  "version": "1.1.0",
+  "description": "Mythos Code – KI-Coding-Agent als App (by Mythoscraft)",
+  "main": "main.js",
+  "author": "Mythoscraft",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "online.mythoscraft.mythoscode",
+    "productName": "Mythos Code",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "config.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "MythosCode-Setup.exe"
+    }
+  }
+}
