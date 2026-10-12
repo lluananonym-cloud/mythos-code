@@ -1,4 +1,4 @@
-const CFG = {"site":"https://ai-mythos.lovable.app","fn":"https://rdxaqiacoitzeowehdts.supabase.co/functions/v1"};
+const CFG = {"site":"https://mythos-ai-final-version.lovable.app","fn":"https://rdxaqiacoitzeowehdts.supabase.co/functions/v1"};
 CFG.site = location.protocol === "file:" ? CFG.site : CFG.site;
 const $ = (id) => document.getElementById(id);
 let cfg = {}, history = [], attach = [], busy = false;
